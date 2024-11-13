@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+    color: white;
+}
+
+ol,
+ul,
+li {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: Norse-Bold;
+    src: url(./Norse-Bold.otf);
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh;    /* my attempt at making the webpage responsive */  /* update: it worked!! Eureka!! */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;    /* my attempt at making the webpage responsive */  /* update: it worked!! Eureka!! */
+    font-family: sans-serif;
+}
+
+.flex-container {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;    /* my attempt at making the webpage responsive */  /* update: it worked!! Eureka!! */
+    display: flex;
+}
+
+.left {
+    width: 30%;
+    height: 100%;
+    background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: 20vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right {
+    width: 70%;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.logo {
+    width: 100%;
+    height: 20%;
+    /* margin-top: 35%; */
+    background-color: rgba(5,5,5,0.5);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.logo-image {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo-image img {
+    height: 90%;
+    flex-basis: auto;
+}
+
+.logo-text {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.5rem;
+    font-family: Norse-Bold , sans-serif;
+    color: white;
+}
+
+.credits {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top,
+.bottom {
+    margin-left: 5%;
+    margin-right: 20%;
+}
+
+.top {
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 5%;
+}
+
+.bottom {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: 900;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+form {
+    /* box-shadow: 0.2rem 0.2rem 2rem; */
+    /* padding: 0% 20% 0% 5%; */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.content {
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.2rem grey;
+    padding: 2.5rem 20% 2.5rem 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    padding: 0.8rem 2.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #596D47;
+    color: white;
+    font-weight: 800;
+    background-color: #596D47;
+    align-self: flex-start;    /* idk why, but if I remove this LOC, button element takes up 100% of it's parent container's width */
+    transition: all ease 0.4s;
+    margin: 2% 20% 0% 5%;
+}
+
+button:hover {
+    box-shadow: 0.1rem 0.1rem 0.5rem 0rem black;
+    transition: all ease 0.4s;
+}
+
+.one,
+.two,
+.three {
+    display: flex;
+    gap: 6rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.class1 {
+    margin-right: 2rem;
+}
+
+input:focus {
+    box-shadow: 0 3px 5px 0px rgba(0,0,0,0.4);
+}
+
+input {
+    font-size: 1rem;
+    padding: 6px;
+    border: 1px solid rgb(180,180,180);
+    border-radius: 6px;
+    background-color: rgb(254,254,254);
+}
+
+input:focus, input:invalid {
+    background-color: white;
+}
+
+input:focus {
+    outline: 1px solid rgb(51,51,255);
+}
+
+input:invalid {
+    outline: 1px solid rgb(255,51,51);
+}
+
+.password-check::after {
+    content: attr(data-error);
+    color: rgb(255,51,51);
+}
