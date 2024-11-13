@@ -7,7 +7,7 @@ for (const i of [password, confirmPassword]) {
         if (password.value != confirmPassword.value) {
             password.setCustomValidity("*Passwords do not match");
             confirmPassword.setCustomValidity("no");
-            inputBox.setAttribute("data-error", "*Passwords do not match");
+            inputBox.setAttribute("data-error", "*Passwords do not matchhi");
         }
         else {
             password.setCustomValidity("");
